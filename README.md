@@ -1,8 +1,8 @@
 # TULITWorks
-DavidDlouhy - repository
-DanielKnourek - repository
-JanPluahr - repository
-DavidVancl - repository
+DavidDlouhy - repository <br>
+DanielKnourek - repository <br>
+JanPluahr - repository <br>
+DavidVancl - repository <>br
 Documents - All files like "Lectures, Exercises (e.g. .xsl,.docx)"
 
 # Initial process
