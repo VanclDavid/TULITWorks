@@ -2,7 +2,7 @@
 DavidDlouhy - repository <br>
 DanielKnourek - repository <br>
 JanPluahr - repository <br>
-DavidVancl - repository <>br
+DavidVancl - repository <br>
 Documents - All files like "Lectures, Exercises (e.g. .xsl,.docx)"
 
 # Initial process
