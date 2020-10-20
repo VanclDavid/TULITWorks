@@ -1,0 +1,82 @@
+--- J11.wav ---
+Detected:  Z
+Failure
+-----------
+--- J12.wav ---
+Detected:  J
+Successful
+-----------
+--- J13.wav ---
+Detected:  J
+Successful
+-----------
+--- J14.wav ---
+Detected:  J
+Successful
+-----------
+--- J15.wav ---
+Detected:  J
+Successful
+-----------
+--- J16.wav ---
+Detected:  J
+Successful
+-----------
+--- J17.wav ---
+Detected:  J
+Successful
+-----------
+--- J18.wav ---
+Detected:  J
+Successful
+-----------
+--- J19.wav ---
+Detected:  J
+Successful
+-----------
+--- J20.wav ---
+Detected:  J
+Successful
+-----------
+--- Z11.wav ---
+Detected:  Z
+Successful
+-----------
+--- Z12.wav ---
+Detected:  Z
+Successful
+-----------
+--- Z13.wav ---
+Detected:  Z
+Successful
+-----------
+--- Z14.wav ---
+Detected:  Z
+Successful
+-----------
+--- Z15.wav ---
+Detected:  Z
+Successful
+-----------
+--- Z16.wav ---
+Detected:  Z
+Successful
+-----------
+--- Z17.wav ---
+Detected:  Z
+Successful
+-----------
+--- Z18.wav ---
+Detected:  Z
+Successful
+-----------
+--- Z19.wav ---
+Detected:  Z
+Successful
+-----------
+--- Z20.wav ---
+Detected:  Z
+Successful
+-----------
+success rate
+19 / 20  =  95

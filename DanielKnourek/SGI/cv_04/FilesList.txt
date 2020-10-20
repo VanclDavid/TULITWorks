@@ -1,0 +1,7 @@
+cv04_00.wav
+cv04_01.wav
+cv04_02.wav
+cv04_03.wav
+cv04_04.wav
+cv04_05.wav
+cv04_06.wav
