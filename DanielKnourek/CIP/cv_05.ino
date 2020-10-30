@@ -14,7 +14,7 @@ void setup()
 }
 
 int prevTime = 0;
-int clickCount = 0;
+int clickLength = 0;
 
 void loop()
 {
@@ -50,38 +50,41 @@ void loop()
   switch (sL2)
   {
   case 1:
-    if (clickCount >= 3)
+    if (clickLength >= 1000)
     {
       sL2 = 0;
       digitalWrite(LED2, 0);
-      clickCount = 0;
+      clickLength = 0;
     }    
     break;
 
   case 0:
   default:
-    if (clickCount >= 3)
+    if (clickLength >= 1000)
     {
       sL2 = 1;
       digitalWrite(LED2, 1);
-      clickCount = 0;
+      clickLength = 0;
     } 
     break;
   }
 }
 
 int btnPast = 0;
+int clickStart = 0;
 
 void registerClick(){
-  int btnCurrent = digitalRead(BTN1); 
-  
-  Serial.println(clickCount);
-  
+  int btnCurrent = digitalRead(BTN1);
+
   if ( btnPast == 1 && btnCurrent == 0)
   {
-    delay(5);
-    clickCount++;
+    clickStart = millis();
   }
-  btnPast = btnCurrent;
+
+  if ( btnPast == 0 && btnCurrent == 1)
+  {
+    clickLength = millis() - clickStart;
+  }
   
+  btnPast = btnCurrent;  
 }
