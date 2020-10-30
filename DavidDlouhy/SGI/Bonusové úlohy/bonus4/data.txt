@@ -1,0 +1,10 @@
+.\data\c0.wav
+.\data\c1.wav
+.\data\c2.wav
+.\data\c3.wav
+.\data\c4.wav
+.\data\c5.wav
+.\data\c6.wav
+.\data\c7.wav
+.\data\c8.wav
+.\data\c9.wav
