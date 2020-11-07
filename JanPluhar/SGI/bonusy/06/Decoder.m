@@ -42,12 +42,11 @@ for i = 1:length(fileNames)
             outputString=[];
                 for m = 1:2:(length(tonesPositions)-1)
                 singleTone=x(tonesPositions(m):1:tonesPositions(m+1)); %úsek tonu
-                Y = fft(singleTone); 
+                Y = fft(singleTone);
                 P2 = abs(Y/length(singleTone)); %dvoustranný graf
                 P1 = P2(1:floor(length(singleTone)/2)+1);
                 P1(2:end-1) = 2*P1(2:end-1); %jednostranný graf
                 f = Fs*(0:(length(singleTone)/2))/length(singleTone);
-                plot(f,P1)
                 [maxValues,maxIndeces]=sort(P1,'descend');
                 max1=round(f(maxIndeces(1)));
                 max2=round(f(maxIndeces(2)));
@@ -57,8 +56,10 @@ for i = 1:length(fileNames)
                     if (regexpi(name,'[0-9]+','match','once'))==outputString
                         correctAnswers=correctAnswers+1;
                         display("správný");
+                        fprintf(fileID,'%1s \r\n',name+" správný");
                     else
                         display("chybný");
+                        fprintf(fileID,'%1s \r\n',name+"chybný");
                         IncorrectAnswers=IncorrectAnswers+1;
                     end
 end
