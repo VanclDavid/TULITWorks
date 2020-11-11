@@ -1,0 +1,11 @@
+dtmf_1234 správný 
+dtmf_54321 správný 
+dtmf_159753 správný 
+dtmf_357951 správný 
+dtmf_9852147 správný 
+dtmf_9874123 správný 
+dtmf_123456789 správný 
+dtmf_316497211 správný 
+dtmf_777777777 správný 
+dtmf_963258741 správný 
+100% úspìšnost 

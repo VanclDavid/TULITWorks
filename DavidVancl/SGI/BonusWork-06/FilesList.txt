@@ -1,0 +1,14 @@
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Static\dtmf_112163.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Static\dtmf_429056843.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Static\dtmf_723684599.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Static\dtmf_987654321.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Dynamic\dtmf_7355.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Dynamic\dtmf_613175.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Dynamic\dtmf_0769835.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Dynamic\dtmf_818047.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Dynamic\dtmf_04142701.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Dynamic\dtmf_6541846.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Dynamic\dtmf_83769142.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Dynamic\dtmf_87833229.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Dynamic\dtmf_98037177.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-06\Sounds_Dynamic\dtmf_867344372.wav

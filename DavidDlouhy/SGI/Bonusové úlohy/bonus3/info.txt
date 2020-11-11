@@ -1,0 +1,8 @@
+1. část
+vypracoval jsem dle zadání a dokumentace Matlabu. Na povelech je znatelné, že slovo zastav má o jednu slabiku více než jeď. Vyvodil jsem tedy, že v řadě případů má dvojitý nárůst energi. Toho jsem i dále využil.
+
+2. část
+řešil jsem tak, že jsem si zjistil energii ve vybraných intervalech, následně jsem zjistil zda na tomto výběru převožoval růst energie nebo byly růst a klesání ve stejné dominanci.
+
+Byl-li spíše růst -> jedná se o slovo Jeď
+Stejné -> jedná se o slovo Zastav
