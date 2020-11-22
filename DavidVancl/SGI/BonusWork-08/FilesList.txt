@@ -1,0 +1,10 @@
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-08\Records\record_1.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-08\Records\record_2.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-08\Records\record_3.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-08\Records\record_4.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-08\Records\record_5.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-08\Records\record_6.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-08\Records\record_7.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-08\Records\record_8.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-08\Records\record_9.wav
+I:\Matlab_scripts\Signaly_a_Informace\BonusWork-08\Records\record_10.wav
