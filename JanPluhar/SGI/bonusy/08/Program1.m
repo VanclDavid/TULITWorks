@@ -1,12 +1,12 @@
 clear all;
 close all;
 fileNames = [];
-for i=1:2
+for i=3
     for j=1:5
         fileNames=[fileNames,"Osoba"+i+"/os"+i+"_puvodni"+j+".wav"];
     end
 end
-folder="osoba1/";
+folder="osoba3/";
 sada=1;
 for k=1:length(fileNames)
 [x,Fs] = audioread(fileNames(k));
@@ -43,7 +43,7 @@ for k=1:length(fileNames)
                 sada=1;
             end
             for o=1:2:length(tonesPositions)
-                audiowrite(folder+"c"+index+"pjjjj_s0"+sada+".wav",x(tonesPositions(o):tonesPositions(o+1)),16000); 
+                audiowrite(folder+"c"+index+"_pjjjj_s0"+sada+".wav",x(tonesPositions(o):tonesPositions(o+1)),16000); 
                 index=index+1;
             end
             sada=sada+1;
