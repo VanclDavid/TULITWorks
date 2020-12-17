@@ -1,0 +1,1 @@
+Get-PnpDevice | Select * | Where-Object -Property FriendlyName -like "*USB*"
