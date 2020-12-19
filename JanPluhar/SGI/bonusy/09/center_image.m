@@ -1,5 +1,4 @@
 function [outputImage] = center_image(inputImage)
-    
     alteredImage=uint8(255)-inputImage;
     imageRows=size(alteredImage,1);
     imageColumns=size(alteredImage,2);

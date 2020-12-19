@@ -43,6 +43,8 @@ x_trida= test_trida(i);      % jeho tøída
     %nejblizsi_trida= tridy_vzoru(index); % tøída nejblišího vzoru
     if x_trida== nejblizsi_trida % je shoda?
         pocet_spravnych = pocet_spravnych + 1;  % pokud ano, zapoèítej
+    else
+        x_trida
     end
         pocet_pokusu = pocet_pokusu + 1;         % zapoèítej pokus
 end
