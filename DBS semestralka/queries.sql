@@ -31,9 +31,7 @@ SELECT [Pharmacies].[name], [Medicaments].[name], [Medicaments].[type], [Stocks]
 WHERE Pharmacies.id = 2
 
 -- How many doctors does hospital have and how many recipes on doctor have been created
- SELECT Hospitals.id ,Hospitals.name , ISNULL(doctor_count,0) AS 'doctor count', ISNULL(recipe_count,0) AS 'recipe count', ISNULL((recipe_count / doctor_count),0) AS 'Recipies on doctor'
- 
- FROM Hospitals
+ SELECT Hospitals.id ,Hospitals.name , ISNULL(doctor_count,0) AS 'doctor count', ISNULL(recipe_count,0) AS 'recipe count', ISNULL((recipe_count / doctor_count),0) AS 'Recipies on doctor' FROM Hospitals
  LEFT JOIN (SELECT id_hospital, sum(var_recipe_count) AS 'recipe_count' FROM Doctors JOIN 
 		(SELECT id_doctor, count(id_doctor) AS 'var_recipe_count' FROM Recipes GROUP BY (id_doctor) ) AS R 
         ON R.id_doctor = Doctors.id GROUP BY id_hospital) AS T1	
