@@ -28,6 +28,10 @@ public class CustomConnector extends DBSConnector {
         executeAndPrint("SELECT firstname, surname, field,ISNULL(pacient_sum,0) pacient_sum FROM People P JOIN Doctors D ON P.id=D.id_people JOIN Doctor_fields F on F.id=D.id RIGHT JOIN (SELECT id_doctors, COUNT(id_People) pacient_sum FROM Doctors_People_tab GROUP BY id_doctors) C ON D.id=C.id_doctors");
     }
 
+    public void getPacients(){
+        executeAndPrint("SELECT firstname,surname,phone FROM People EXCEPT SELECT firstname,surname,phone FROM People JOIN Doctors ON Doctors.id_people = People.id");
+    }
+
     public void getStockPharmacy(){
         executeAndPrint("SELECT [Pharmacies].[name], [Medicaments].[name], [Medicaments].[type], [Stocks].[pieces] FROM Pharmacies LEFT JOIN Stocks ON Pharmacies.id = Stocks.id_pharmacies LEFT JOIN Medicaments ON Medicaments.id = Stocks.id_medicaments      ");
     }

@@ -36,7 +36,7 @@ public class Main {
                                 customConnector.getDoctorsPeopleCount();
                                 break;
                             case 5:
-
+                                customConnector.getPacients();
                                 break;
                             case 6:
                                 customConnector.getStockPharmacy();
