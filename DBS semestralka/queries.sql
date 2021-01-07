@@ -1,5 +1,5 @@
 --SELECT v SELECT
-SELECT [name],[type],pieces,(SELECT AVG(pieces) FROM Stocks) AS 'average_stock' FROM Medicaments M LEFT JOIN Stocks S on M.id=S.id_medicament WHERE M.id IN (SELECT id_medicament FROM Stocks)
+SELECT [name],[type],pieces,(SELECT AVG(pieces) FROM Stocks) AS 'average_stock' FROM Medicaments M LEFT JOIN Stocks S on M.id=S.id_medicaments WHERE M.id IN (SELECT id_medicaments FROM Stocks)
 
 --SELECT ve FROM
 SELECT S.sum_pieces FROM (SELECT SUM(pieces) AS 'sum_pieces' FROM Stocks GROUP BY Stocks.id_pharmacies) AS S WHERE sum_pieces>200
@@ -20,7 +20,7 @@ SELECT [Pharmacies].[name], [Medicaments].[name], [Medicaments].[type], [Stocks]
     LEFT JOIN Stocks 
         ON Pharmacies.id = Stocks.id_pharmacies
     LEFT JOIN Medicaments 
-        ON Medicaments.id = Stocks.id_medicaments
+        ON Medicaments.id = Stocks.id_medicaments      
 
 -- LEFT JOIN What phramacy n [2] have in stock
 SELECT [Pharmacies].[name], [Medicaments].[name], [Medicaments].[type], [Stocks].[pieces] FROM Pharmacies
