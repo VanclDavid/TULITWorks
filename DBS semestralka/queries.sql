@@ -40,3 +40,7 @@ WHERE Pharmacies.id = 2
         (SELECT id_hospital, count(id_hospital) AS 'doctor_count' FROM Doctors GROUP BY id_hospital) AS T2
     ON T2.id_hospital = Hospitals.id 
  
+SELECT firstname,surname,phone FROM People
+	EXCEPT 
+SELECT firstname,surname,phone FROM People 
+	JOIN Doctors ON Doctors.id_people = People.id
