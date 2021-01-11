@@ -1,5 +1,6 @@
 package com.dbs;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -53,5 +54,13 @@ public class UI {
             System.out.println("ID ("+(ids.size() + 1)+"):");
         }
         return ids;
+    }
+
+    public static void printSQLException(SQLException e){
+        System.out.format("Something went wrong ... '%s'.",e.toString());
+    }
+
+    public static void printMessage(String message){
+        System.out.format("%s",message);
     }
 }

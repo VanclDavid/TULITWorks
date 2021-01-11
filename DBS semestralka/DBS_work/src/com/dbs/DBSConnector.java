@@ -38,9 +38,9 @@ public class DBSConnector extends AccessPoint {
             sqlBuilder.setLength(sqlBuilder.length() - 1);
             sqlBuilder.append(")");
             statement.executeUpdate(sqlBuilder.toString());
-            System.out.println("Successfully executed.");
+            UI.printMessage("Successfully executed. [INSERT]");
         } catch (SQLException e){
-            System.out.println("Something went wrong ... {"+e+"}");
+            UI.printSQLException(e);
         }
     }
 
@@ -63,9 +63,9 @@ public class DBSConnector extends AccessPoint {
                 }
                 System.out.println();
             }
-            System.out.println("Successfully selected.");
+            UI.printMessage("Successfully executed. [SELECT]");
         } catch (SQLException e){
-            System.out.println("Something went wrong ... {"+e+"}");
+            UI.printSQLException(e);
         }
     }
 
@@ -81,9 +81,9 @@ public class DBSConnector extends AccessPoint {
                 sqlCreator.append(convertIDsToString(ids));
             }
             statement.executeUpdate(sqlCreator.toString());
-            System.out.println("Successfully deleted.");
+            UI.printMessage("Successfully executed. [DELETE]");
         } catch (SQLException e){
-            System.out.println("Something went wrong ... {"+e+"}");
+            UI.printSQLException(e);
         }
     }
 
@@ -111,9 +111,9 @@ public class DBSConnector extends AccessPoint {
                 sql = sqlCreator.toString();
             }
             statement.executeUpdate(sql);
-            System.out.println("Successfully executed.");
+            UI.printMessage("Successfully executed. [EDIT]");
         } catch (SQLException e){
-            System.out.println("Something went wrong ... {"+e+"}");
+            UI.printSQLException(e);
         }
     }
 
@@ -125,7 +125,7 @@ public class DBSConnector extends AccessPoint {
                 fields.add(metaData.getColumnName(i));
             }
         } catch(SQLException e) {
-            System.out.println("Wrong parsing ... {"+e+"}");
+            UI.printSQLException(e);
         }
         return fields;
     }
