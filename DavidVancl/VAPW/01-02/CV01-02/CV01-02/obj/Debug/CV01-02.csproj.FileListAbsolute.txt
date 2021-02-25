@@ -1,0 +1,10 @@
+I:\SchoolWorks\DavidVancl\VAPW\01-02\CV01-02\CV01-02\bin\Debug\CV01-02.exe.config
+I:\SchoolWorks\DavidVancl\VAPW\01-02\CV01-02\CV01-02\bin\Debug\CV01-02.exe
+I:\SchoolWorks\DavidVancl\VAPW\01-02\CV01-02\CV01-02\bin\Debug\CV01-02.pdb
+I:\SchoolWorks\DavidVancl\VAPW\01-02\CV01-02\CV01-02\obj\Debug\CV01-02.csprojAssemblyReference.cache
+I:\SchoolWorks\DavidVancl\VAPW\01-02\CV01-02\CV01-02\obj\Debug\CV01_02.Properties.Resources.resources
+I:\SchoolWorks\DavidVancl\VAPW\01-02\CV01-02\CV01-02\obj\Debug\CV01-02.csproj.GenerateResource.cache
+I:\SchoolWorks\DavidVancl\VAPW\01-02\CV01-02\CV01-02\obj\Debug\CV01-02.csproj.CoreCompileInputs.cache
+I:\SchoolWorks\DavidVancl\VAPW\01-02\CV01-02\CV01-02\obj\Debug\CV01-02.exe
+I:\SchoolWorks\DavidVancl\VAPW\01-02\CV01-02\CV01-02\obj\Debug\CV01-02.pdb
+I:\SchoolWorks\DavidVancl\VAPW\01-02\CV01-02\CV01-02\obj\Debug\CV01_02.CV01_02.resources
