@@ -9,7 +9,7 @@ SELECT Pharmacies.[name],S.sum_pieces AS 'Stock size'
 FROM (SELECT Stocks.id_pharmacies,SUM(pieces) AS 'sum_pieces' 
 FROM Stocks 
 GROUP BY Stocks.id_pharmacies) AS S 
-LEFT JOIN Pharmacies ON S.id_pharmacies = Pharmacies.id WHERE sum_pieces>200
+JOIN Pharmacies ON S.id_pharmacies = Pharmacies.id WHERE sum_pieces>200
 
 --Group by
 SELECT firstname, surname, field,ISNULL(pacient_sum,0) pacient_sum
