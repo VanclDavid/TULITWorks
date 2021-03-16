@@ -1,0 +1,10 @@
+I:\Projects TMP\CV03-04\CV04\bin\Debug\CV04.exe.config
+I:\Projects TMP\CV03-04\CV04\bin\Debug\CV04.exe
+I:\Projects TMP\CV03-04\CV04\bin\Debug\CV04.pdb
+I:\Projects TMP\CV03-04\CV04\obj\Debug\CV04.csprojAssemblyReference.cache
+I:\Projects TMP\CV03-04\CV04\obj\Debug\CV04.Form1.resources
+I:\Projects TMP\CV03-04\CV04\obj\Debug\CV04.Properties.Resources.resources
+I:\Projects TMP\CV03-04\CV04\obj\Debug\CV04.csproj.GenerateResource.cache
+I:\Projects TMP\CV03-04\CV04\obj\Debug\CV04.csproj.CoreCompileInputs.cache
+I:\Projects TMP\CV03-04\CV04\obj\Debug\CV04.exe
+I:\Projects TMP\CV03-04\CV04\obj\Debug\CV04.pdb
