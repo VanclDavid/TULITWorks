@@ -51,10 +51,11 @@ def get_words(n, m, data):
         if len(key) >= m:
             result[key] = value
             counter = counter+1
+    return result
 
 
 if __name__ == '__main__':
     # save_persons('D:\\test.csv', [{'name': 'Jarda', 'age': 20},{'name': 'Pepa', 'age': 15}])
-    # test = load_persons('D:\\test.csv')
+    # print(load_persons('D:\\test.csv'))
     # print(text_analysis('D:\\sh.txt'))
-    print(get_words(10, 8, text_analysis('D:\\sh.txt')[1]))
+     print(get_words(10, 8, text_analysis('D:\\sh.txt')[1]))
