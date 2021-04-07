@@ -10,7 +10,7 @@ public class UI {
                 "1. INSERT VALUE\n" +
                 "2. SELECT\n" +
                 "3. PRELOADED SELECTS\n" +
-                "4. TRUNCATE TABLE\n" +
+                "4. DELETE ROW\n" +
                 "5. EDIT ROW\n" +
                 "-1. Exit app\n" +
                 "Select operation: "
@@ -61,6 +61,6 @@ public class UI {
     }
 
     public static void printMessage(String message){
-        System.out.format("%s",message);
+        System.out.format("%s\n",message);
     }
 }

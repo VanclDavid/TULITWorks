@@ -78,7 +78,7 @@ public class DBSConnector extends AccessPoint {
             StringBuilder sqlCreator = new StringBuilder();
             sqlCreator.append("DELETE FROM ").append(table);
             if(ids.size() > 0){
-                sqlCreator.append(convertIDsToString(ids));
+                sqlCreator.append(" ").append(convertIDsToString(ids));
             }
             statement.executeUpdate(sqlCreator.toString());
             UI.printMessage("Successfully executed. [DELETE]");
