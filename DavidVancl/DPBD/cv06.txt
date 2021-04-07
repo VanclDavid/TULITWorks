@@ -1,0 +1,70 @@
+1,a aggregate)
+db.restaurants.aggregate([
+  { $group: { _id: "$address.zipcode" , count: {$sum: 1} } },
+  { $sort: { "_id": 1 }},
+  { $limit: 10 }
+])
+
+1,a mapReduce)
+db.restaurants.mapReduce(
+  function() { emit(this.address.zipcode, this.name) },
+  function(ids, values) { return values.length },
+  {out: "cv_1a"}
+)
+db.cv_1a.find().sort( { _id: 1 } ).limit(10)
+
+1,b aggregate)
+db.restaurants.aggregate([
+  { $group: { _id: "$address.zipcode" , count: {$sum: 1} } },
+  { $sort: { "count": -1 }},
+  { $limit: 10}
+])
+
+1,b mapReduce)
+db.restaurants.mapReduce(
+  function() { emit(this.address.zipcode, this.name) },
+  function(ids, values) { return values.length },
+  {out: "cv_1b"}
+)
+db.cv_1b.find().sort( { value: -1 } ).limit(10)
+
+2 aggregate)
+db.restaurants.aggregate([
+  { $match: { "grades.grade" : { $not: { $eq: "Not Yet Graded" } } } },
+  { $unwind : "$grades" },
+  { $match: { "grades.grade" : { $not: { $eq: "Not Yet Graded" } } } },
+  { $group : { _id : "$name", avg : { $avg : "$grades.score" } } },
+  { $limit: 10}
+])
+
+2 mapReduce)
+db.restaurants.mapReduce(
+  function() {
+    for(var i = 0; i < this.grades.length; i++) {
+      var key = this.name;
+      var value = { count: 1, score: this.grades[i].score, grade: this.grades[i].grade };
+      emit(key, value);
+    }
+  },
+  function(id, values) {
+    re_val = { count: 0, score_sum: 0};
+    for (var i = 0; i < values.length; i++) {
+      re_val.count += values[i].count;
+      re_val.score_sum += values[i].score;
+    }
+    return re_val;
+  },
+  {
+    out: { merge: "cv_2" },
+    query: { "grades.grade" : { $not: { $eq: "Not Yet Graded" } } },
+    finalize: function(key, re_val) {
+      re_val.avg = re_val.score_sum/re_val.count;
+      return re_val;
+    }
+  }
+)
+db.cv_2.find().limit(10)
+
+// testování
+// mapReduce do find --- { _id: { $eq: "Uno Chicago Grill" }}
+// aggregate za limit --- { $match: { _id: { $eq: "Uno Chicago Grill" } }}
