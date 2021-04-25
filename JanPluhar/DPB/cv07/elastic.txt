@@ -1,0 +1,33 @@
+#1
+PUT /person
+
+#2
+POST /person/_doc/0
+{
+  "firstname": "Jan",
+  "surname": "Pluhař"
+}
+
+#3
+GET person/_doc/0
+
+#4
+POST /person/_update/0
+{
+"script" : {
+    "source": "ctx._source.firstname = 'Pepa'"
+  }
+}
+
+#5
+GET person/_search
+{
+    "query": {
+        "match_all": {}
+    }
+}
+
+#6
+DELETE /person/_doc/0
+#7
+DELETE /person
