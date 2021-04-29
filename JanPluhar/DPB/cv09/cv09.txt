@@ -1,0 +1,195 @@
+# 1)
+PUT /orders-new
+{
+  "mappings": {
+    "properties": {
+      "order": {
+        "properties": {
+        "order_id":{"type":"long"},
+        "order_date":{"type":"date"}
+        }
+      },
+      "customer": {
+        "properties": {  
+          "name":{"type":"text"},
+          "address":{
+            "properties":{
+              "street":{"type":"text"},
+              "number":{"type":"integer"},
+              "city":{"type":"text"},
+              "PSC":{"type":"integer"}
+            }
+          }
+          }
+      },
+      "products": {
+         "properties" : {
+            "id" : {"type" : "long"},
+            "quantity" : {"type" : "integer"},
+            "name":{"type":"text"},
+            "price":{"type":"double"}
+          }
+      }
+    }
+  }
+}
+
+# 2)
+POST /orders-new/_doc
+{
+      "order": {
+        "order_id":1254678913,
+        "order_date":"2021-04-28T20:17:54Z"
+      },
+      "customer": {
+          "name":"Pepa Chudý",
+          "address":{
+              "street":"Zapadlá",
+              "number":66,
+              "city":"Kdovíkde",
+              "PSC":14725
+          }
+      },
+      "products": [
+        {
+            "id" : 5467954,
+            "quantity" : 5,
+            "name": "Coffee - Colombian Portioned",
+            "price":199.99
+        },
+        {
+            "id" : 4578700,
+            "quantity" : 1,
+            "name": "Wine - Maipo Valle Cabernet",
+            "price":450
+        },
+        {
+            "id" : 5467954,
+            "quantity" : 5,
+            "name": "Venison - Liver",
+            "price":59.40
+        }
+      ]
+    }
+
+#agregace
+# 1)
+
+GET /products/_search
+{
+  "size": 0,
+  "aggs": {
+    "min_price": {
+      "min": {
+        "field": "price"
+      }
+    },
+    "max_price": {
+      "max": {
+        "field": "price"
+      }
+    },
+    "avg_price": {
+      "avg": {
+        "field": "price"
+      }
+    }
+  }
+}
+
+# 2)
+GET /products/_search?size=0
+{
+  "aggs": {
+    "sell_stats": { "stats": { "field": "sold" } }
+  }
+}
+
+# 2a)
+GET /products/_search?size=0
+{
+      "aggs": {
+        "top_sell_hits": {
+          "top_hits": {
+            "sort": [
+              {
+                "sold": {
+                  "order": "desc"
+                }
+              }
+            ],
+            "size": 1
+          }
+        }
+      }
+}
+
+# 3)
+POST /products/_search?size=0
+{
+  "aggs": {
+    "doc_count": {
+      "terms": {
+        "field": "tags"
+      }
+    }
+  }
+}
+
+# 4)
+POST /products/_search?size=0
+{
+  "aggs": {
+    "doc_count": {
+      "terms": {
+        "field": "tags"
+      },
+      "aggs":{
+        "price_stats":{
+           "stats": { "field": "price" } 
+        }
+      }
+    }
+  }
+}
+
+# 5)
+POST /products/_search?size=0
+{
+  "aggs": {
+    "filtered_products": {
+      "filter": {
+        "bool" : {
+          "should" : [
+            {"term" : { "tags" : "Coffee" } },
+            {"term" : { "tags" : "Cake" } }
+            ]
+          }
+        },
+      "aggs":{
+        "price_stats":{
+           "stats": { "field": "price" } 
+        }
+      }
+      }
+  }
+}
+
+#analyzéry
+#1
+POST _analyze
+{
+  "analyzer": "standard",
+  "text": "Nějaká 1náhodná věta, která-nedává smysl."
+}
+POST _analyze
+{
+  "analyzer": "simple",
+  "text": "Nějaká 1náhodná věta, která-nedává smysl."
+}
+POST _analyze
+{
+  "analyzer": "whitespace",
+  "text": "Nějaká 1náhodná věta, která-nedává smysl."
+}
+
