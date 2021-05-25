@@ -121,7 +121,8 @@ for row in result:
 """
 
 print_delimiter(5)
-result = session.execute("SELECT * FROM messages WHERE room_id=1 AND speaker_id=2 limit 5 ALLOW FILTERING;")
+session.execute("CREATE INDEX IF NOT EXISTS messages_q ON messages (speaker_id)")
+result = session.execute("SELECT * FROM messages WHERE room_id=1 AND speaker_id=2 limit 5;")
 for row in result:
     print(row[0], row[1], row[2], row[3])
 
@@ -130,7 +131,8 @@ for row in result:
 """
 
 print_delimiter(6)
-result = session.execute("SELECT COUNT('room_id') FROM messages WHERE room_id=1 AND speaker_id=2 ALLOW FILTERING;")
+session.execute("CREATE INDEX IF NOT EXISTS messages_q ON messages (speaker_id)")
+result = session.execute("SELECT COUNT('room_id') FROM messages WHERE room_id=1 AND speaker_id=2;")
 print(result[0])
 
 """
@@ -138,7 +140,8 @@ print(result[0])
 """
 
 print_delimiter(7)
-result = session.execute("SELECT room_id,COUNT(message) FROM messages GROUP BY room_id ALLOW FILTERING;")
+session.execute("CREATE INDEX IF NOT EXISTS messages_q ON messages (speaker_id)")
+result = session.execute("SELECT room_id,COUNT(message) FROM messages GROUP BY room_id;")
 for row in result:
     print(row[0], row[1])
 
@@ -147,6 +150,7 @@ for row in result:
 """
 
 print_delimiter(8)
-result = session.execute("SELECT DISTINCT room_id FROM messages ALLOW FILTERING;")
+session.execute("CREATE INDEX IF NOT EXISTS messages_q ON messages (speaker_id)")
+result = session.execute("SELECT DISTINCT room_id FROM messages;")
 for row in result:
     print(row[0])
